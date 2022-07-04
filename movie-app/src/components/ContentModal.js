@@ -11,10 +11,10 @@ import Carousel from './Carousel';
 const style = {
   width: "90%",
   height: "80%",
-  bgcolor: 'brown',
+  bgcolor: '#73130b',
   border: '1px solid #000',
   borderRadius: "10px",
-  color: "white",
+  color: "#d0d5d9",
   position: 'absolute',
   top: '50%',
   left: '50%',
@@ -102,7 +102,7 @@ export default function ContentModal({children, media_type, id}) {
                startIcon={<YouTubeIcon />}
                target="__blank"
                href={`https://www.youtube.com/watch?v=${video}`}
-               style={{backgroundColor: "#431919"}}
+               style={{backgroundColor: "#131212"}}
                >
                  WATCH TRAILER
                </Button>

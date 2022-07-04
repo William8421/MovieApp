@@ -1,4 +1,4 @@
-.trending{
+.container{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -6,10 +6,11 @@
         text-transform: uppercase;
         display: flex;
         justify-content: center;
+        font-family: 'PT Mono', monospace;
         font-size: 2vw;
         padding: 4px;
         border-radius: 50px;
-        color: white
+        color: #d0d5d9;
     }
 };
 @media(max-width: 700px){
@@ -19,6 +20,6 @@
 };
 @media(max-width: 1000px){
     .pageTitle{
-        font-size: 6.4 vw;
+        font-size: 6.4vw;
     }
 }

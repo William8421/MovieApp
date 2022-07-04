@@ -26,7 +26,7 @@ export default function Movies() {
         // eslint-disable-next-line
     }, [page, genreforURL])
   return (
-    <div className='trending'>
+    <div className='container'>
       <span className='pageTitle'>Movies</span>
       <Genres
       selectedGenres={selectedGenres}
@@ -36,7 +36,7 @@ export default function Movies() {
       setPage={setPage}
       type="movie"
       />
-      <div className='trending'>
+      <div className='container'>
             {
                 content && content.map(item => (
                     <SingleContent key={item.id} 

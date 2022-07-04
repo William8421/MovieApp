@@ -69,7 +69,7 @@ export default function Search() {
         </Tabs>
 
       </ThemeProvider>
-      <div className='trending'>
+      <div className='container'>
             {
                 content && content.map(item => (
                     <SingleContent

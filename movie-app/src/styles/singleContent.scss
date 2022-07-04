@@ -4,7 +4,7 @@
     width: 200px;
     padding: 5px;
     margin: 5px 0;
-    background-color: #1c0103;
+    background-color: #131212;
     border-radius: 1px;
     position: relative;
     cursor: pointer;
@@ -27,8 +27,8 @@
     };
 }
 .media:hover{
-    background-color: white;
-    color: black;
+    background-color: #d0d5d9;
+    color: #131212;
 }
 @media(max-width: 550px){
     .media{

@@ -55,7 +55,7 @@ export default function Genres({genres, setGenres, selectedGenres, setSelectedGe
           size='small'
           key={genre.id}
           onClick={() => handleAdd(genre)}
-          style={{margin: "4px", backgroundColor: "white"}}
+          style={{margin: "4px", backgroundColor: "#d0d5d9"}}
           />
           ))}
     </div>

@@ -19,9 +19,9 @@ export default function Trending() {
         // eslint-disable-next-line
     }, [page])
   return (
-    <div className='trending'>
+    <div className='container'>
       <span className='pageTitle'>Trending</span>
-        <div className='trending'>
+        <div className='container'>
             {
                 content && content.map(item => (
                     <SingleContent key={item.id} 

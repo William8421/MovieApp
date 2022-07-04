@@ -28,7 +28,7 @@ export default function Series() {
 
 
   return (
-    <div className='trending'>
+    <div className='container'>
       <span className='pageTitle'>Series</span>
       <Genres
       selectedGenres={selectedGenres}
@@ -38,7 +38,7 @@ export default function Series() {
       setPage={setPage}
       type="tv"
       />
-      <div className='trending'>
+      <div className='container'>
             {
                 content && content.map(item => (
                     <SingleContent key={item.id} 
