@@ -16,9 +16,9 @@ export default function Movies() {
 
     const fetchMovies = async () => {
         const {data} = await axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_genres=${genreforURL}`)
-
         setContent(data.results)
         setNumOfPages(data.total_pages)
+        console.log(data);
     };
 
 
@@ -44,7 +44,7 @@ export default function Movies() {
                     id={item.id} poster={item.poster_path}
                     title={item.title || item.name}
                     date={item.first_air_date || item.release_date}
-                    media_type={item.movie}
+                    media_type="movie"
                     vote_average={item.vote_average}
                     />
                 ))

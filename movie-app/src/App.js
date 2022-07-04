@@ -1,6 +1,5 @@
 import { Container } from '@mui/material';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-// import './App.css';
 import './styles/style.scss'
 import Header from './components/Header';
 import SimpleBottomNavigation from './components/MainNav.js'

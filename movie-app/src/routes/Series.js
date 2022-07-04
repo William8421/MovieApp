@@ -45,7 +45,7 @@ export default function Series() {
                     id={item.id} poster={item.poster_path}
                     title={item.title || item.name}
                     date={item.first_air_date || item.release_date}
-                    media_type={item.movie}
+                    media_type="tv"
                     vote_average={item.vote_average}
                     />
                 ))
