@@ -3,7 +3,7 @@ import React from 'react';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import { useState, useEffect } from 'react';
-import { Button } from '@mui/material';
+// import { Button } from '@mui/material';
 
 const handleDragStart = (e) => e.preventDefault();
 
@@ -13,6 +13,7 @@ const Carousel = ({media_type, id}) => {
     const noPicture = 'https://upload.wikimedia.org/wikipedia/en/6/60/No_Picture.jpg'
     
     const items = credits?.map(item => (
+                <a className='carouselItem' target="__blank" href={`https://www.themoviedb.org/person/${item.id}${item.name}`} >
         <div className='carouselItem'>
             <img src={item.profile_path ? `https://image.tmdb.org/t/p/w500/${item.profile_path}`:noPicture}
             alt=""
@@ -20,14 +21,15 @@ const Carousel = ({media_type, id}) => {
             className="carouselItem_img"
             />
             <p className='carouselItem_txt'>{item?.name}</p>
-            <Button
+            {/* <Button
             variant='contained'
                    target="__blank"
                    href={`https://www.themoviedb.org/person/${item.id}${item.name}`}
                    style={{backgroundColor: "brown", position: "absolute"}}
                    > more
-                </Button>
+                </Button> */}
         </div>
+        </a>
     ));
 
     const responsive ={
