@@ -29,6 +29,7 @@ export default function Series() {
 
   return (
     <div className='container'>
+      <div>
       <span className='pageTitle'>Series</span>
       <Genres
       selectedGenres={selectedGenres}
@@ -38,6 +39,7 @@ export default function Series() {
       setPage={setPage}
       type="tv"
       />
+      </div>
       <div className='container'>
             {
                 content && content.map(item => (

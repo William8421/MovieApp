@@ -64,8 +64,10 @@ export default function Search() {
         }}
         style={{paddingBottom: "5px"}}
         >
-        <Tab style={{width: "50%"}} label="Search Movies"/>
-        <Tab style={{width: "50%"}} label="Search TV Series"/>
+          <div style={{width: "100%", display: "flex", justifyContent: "space-between"}} >
+        <div><Tab style={{width: "50%"}} label="Search Movies"/></div>
+        <div><Tab style={{width: "50%"}} label="Search TV Series"/></div>
+        </div>
         </Tabs>
 
       </ThemeProvider>

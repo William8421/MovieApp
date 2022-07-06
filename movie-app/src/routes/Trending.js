@@ -30,6 +30,7 @@ export default function Trending() {
                     date={item.first_air_date || item.release_date}
                     media_type={item.media_type}
                     vote_average={item.vote_average}
+                    overview={item.overview}
                     />
                 ))
             }

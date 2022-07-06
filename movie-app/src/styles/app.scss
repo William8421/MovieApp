@@ -5,8 +5,10 @@
     min-height: 100vh;
     background-color: #68201c;
     color: #d0d5d9;
-    padding-top: 100px;
+    padding-top: 70px;
     padding-bottom: 70px;
+    display: flex;
+    justify-content: center;
   }
   
   @media(max-width: 700px){

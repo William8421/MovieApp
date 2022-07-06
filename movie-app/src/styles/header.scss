@@ -1,5 +1,5 @@
 .header{
-    background-color: #3c4043 !important;
+    background-color: #192227 !important;
     position:fixed;
     top: 0;
     width: 100%;
@@ -7,28 +7,47 @@
     justify-content: space-evenly;
     gap: 15vw;
     height: 60px;
+    .appName{
+        text-decoration: none;
+        color: #d0d5d9;
+        font-size: 30px;
+        align-self: center;
+        font-family: 'Satisfy', cursive;
+    }
+    .nameBox{
+          display: flex;
+          align-items: center;
+          gap: 1vw;
+          cursor: pointer;
+          img{
+              height: 80%;
+          }
+    }
+    .navIcon{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: #d0d5d9;
+        font-family: 'PT Mono', monospace;
+    }
 }
-.navIcon{
-    display: flex;
+
+
+@media(max-width: 415px){
+    .header{
+    gap: 1vw;
     flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    color: #d0d5d9;
-    font-family: 'PT Mono', monospace;
-}
-.appName{
-    text-decoration: none;
-    color: #d0d5d9;
-    font-size: 30px;
-    align-self: center;
-    font-family: 'Satisfy', cursive;
-}
-.nameBox{
-      display: flex;
-      align-items: center;
-      gap: 1vw;
-      cursor: pointer;
-      img{
-          height: 80%;
-      }
+    .nameBox{
+        flex-direction: column;
+    }
+    img{
+        // display: none;
+        width: 20px;
+    }
+    .appName{
+        width: 80px;
+        font-size: 20px;
+    }
+    }
 }

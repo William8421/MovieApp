@@ -1,4 +1,4 @@
-import { Container } from '@mui/material';
+// import { Container } from '@mui/material';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import './styles/style.scss'
 import SimpleBottomNavigation from './components/Header.js'
@@ -11,14 +11,14 @@ function App() {
   return (
     <BrowserRouter>
     <div className="App">
-    <Container>
+    <div style={{width: "80%"}}>
     <Routes>
       <Route path='/' element={<Trending/>}/>
         <Route path='/movies' element={<Movies/>}/>
         <Route path='/series' element={<Series/>}/>
         <Route path='/search' element={<Search/>}/>
     </Routes>
-    </Container>
+    </div>
 
     </div>
     <SimpleBottomNavigation/>

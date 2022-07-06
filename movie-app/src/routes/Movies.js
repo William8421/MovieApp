@@ -27,6 +27,7 @@ export default function Movies() {
     }, [page, genreforURL])
   return (
     <div className='container'>
+      <div>
       <span className='pageTitle'>Movies</span>
       <Genres
       selectedGenres={selectedGenres}
@@ -36,6 +37,7 @@ export default function Movies() {
       setPage={setPage}
       type="movie"
       />
+      </div>
       <div className='container'>
             {
                 content && content.map(item => (
