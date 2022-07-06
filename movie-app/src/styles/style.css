@@ -1,47 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Mono&display=swap");
 * {
   scroll-behavior: smooth; }
 
 .App {
   min-height: 100vh;
-  background-color: #431919;
-  color: white;
-  padding-top: 100px;
-  padding-bottom: 70px; }
+  background-color: #68201c;
+  color: #d0d5d9;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  display: flex;
+  justify-content: center; }
 
 @media (max-width: 700px) {
   .App {
     padding-top: 70px; } }
-.navIcon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  color: white; }
-
 .header {
-  width: 100%;
-  cursor: pointer;
+  background-color: #192227 !important;
   position: fixed;
+  top: 0;
+  width: 100%;
   display: flex;
-  text-transform: uppercase;
-  background-color: brown;
-  font-size: 3vw;
-  padding-bottom: 15px;
-  box-shadow: 0px 1px 5px #000000;
-  color: #ffffff;
-  z-index: 100; }
+  justify-content: space-evenly;
+  gap: 15vw;
+  height: 60px; }
+  .header .appName {
+    text-decoration: none;
+    color: #d0d5d9;
+    font-size: 30px;
+    align-self: center;
+    font-family: 'Satisfy', cursive; }
+  .header .nameBox {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    cursor: pointer; }
+    .header .nameBox img {
+      height: 80%; }
+  .header .navIcon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #d0d5d9;
+    font-family: 'PT Mono', monospace; }
 
-@media (max-width: 1000px) {
+@media (max-width: 415px) {
   .header {
-    padding-top: 15px;
-    font-size: 3vw; } }
+    gap: 1vw;
+    flex-direction: column; }
+    .header .nameBox {
+      flex-direction: column; }
+    .header img {
+      width: 20px; }
+    .header .appName {
+      width: 80px;
+      font-size: 20px; } }
 .media {
   display: flex;
   flex-direction: column;
-  width: 200px;
+  width: 250px;
   padding: 5px;
   margin: 5px 0;
-  background-color: #1c0103;
+  background-color: #131212;
   border-radius: 1px;
   position: relative;
   cursor: pointer;
@@ -52,39 +73,59 @@
     text-align: center; }
   .media .container {
     display: flex;
-    justify-content: space-between; }
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    font-family: 'PT Mono', monospace; }
+    .media .container .sybContainer {
+      display: flex;
+      justify-content: space-between; }
   .media span {
     display: flex;
     justify-content: space-between;
     padding: 0 2px;
     padding-bottom: 3px; }
+  .media .tag {
+    font-weight: 600; }
+  .media .tag.green {
+    color: green; }
+  .media .tag.orange {
+    color: orange; }
+  .media .tag.red {
+    color: red; }
 
 .media:hover {
-  background-color: white;
-  color: black; }
+  background-color: #d0d5d9;
+  color: #131212; }
+  .media:hover .tag.orange {
+    color: orangered; }
 
 @media (max-width: 550px) {
   .media {
-    width: 46%; } }
-.trending {
+    width: 80%; } }
+.container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around; }
-  .trending .pageTitle {
+  .container .pageTitle {
     text-transform: uppercase;
     display: flex;
     justify-content: center;
+    font-family: 'PT Mono', monospace;
     font-size: 2vw;
     padding: 4px;
     border-radius: 50px;
-    color: white; }
+    color: #d0d5d9; }
 
 @media (max-width: 700px) {
   .App {
     padding-top: 70px; } }
 @media (max-width: 1000px) {
   .pageTitle {
-    font-size: 6.4 vw; } }
+    font-size: 6.4vw; } }
+.pages {
+  margin-top: 20px; }
+
 .contentModal_landscape {
   object-fit: contain;
   border-radius: 10px;
@@ -97,7 +138,8 @@
 
 .tagline {
   padding-bottom: 10px;
-  align-self: center; }
+  align-self: center;
+  font-size: 30px; }
 
 .contentModal {
   display: flex;
@@ -134,7 +176,7 @@
   padding: 15px;
   border-radius: 20px;
   scrollbar-width: thin;
-  box-shadow: inset 0 0 5px black;
+  box-shadow: inset 0 0 5px #131212;
   text-align: center; }
 
 .contentModal-description::-webkit-scrollbar {
@@ -171,6 +213,8 @@
   .carouselItem img {
     border-radius: 10px;
     margin-bottom: 5px;
-    box-shadow: 0px 0px 5px black; }
+    box-shadow: 0px 0px 5px #131212; }
+  .carouselItem p {
+    margin-bottom: 50px; }
 
 /*# sourceMappingURL=style.css.map */

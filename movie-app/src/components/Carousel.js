@@ -3,6 +3,7 @@ import React from 'react';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import { useState, useEffect } from 'react';
+import { Button } from '@mui/material';
 
 const handleDragStart = (e) => e.preventDefault();
 
@@ -18,7 +19,14 @@ const Carousel = ({media_type, id}) => {
             onDragStart={handleDragStart}
             className="carouselItem_img"
             />
-            <b className='carouselItem_txt'>{item?.name}</b>
+            <p className='carouselItem_txt'>{item?.name}</p>
+            <Button
+            variant='contained'
+                   target="__blank"
+                   href={`https://www.themoviedb.org/person/${item.id}${item.name}`}
+                   style={{backgroundColor: "brown", position: "absolute"}}
+                   > more
+                </Button>
         </div>
     ));
 
@@ -38,6 +46,7 @@ const Carousel = ({media_type, id}) => {
     const fetchCredits = async () => {
         const {data} = await axios.get(`https://api.themoviedb.org/3/${media_type}/${id}/credits?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`)
         setCredits(data.cast)
+        console.log(data.cast);
     }
 
     useEffect(() => {
