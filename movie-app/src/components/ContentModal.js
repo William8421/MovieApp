@@ -9,8 +9,8 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import Carousel from './Carousel';
 
 const style = {
-  width: "90%",
-  height: "80%",
+  width: "80%",
+  height: "70%",
   bgcolor: '#73130b',
   border: '1px solid #000',
   borderRadius: "10px",
@@ -50,7 +50,6 @@ export default function ContentModal({children, media_type, id}) {
   }, [])
   
   
-  // const link = `https://image.tmdb.org/t/p/w500/`;
   const unavailable = 'https;//www.movienewz.com/img/films/poster-holder.jpg';
   
   return (
@@ -68,7 +67,7 @@ export default function ContentModal({children, media_type, id}) {
         }}
       >
         <Fade in={open}>
-          {content && (<Box sx={style}>
+          {content && (<Box sx={style} className='boxTest'>
            <div className='contentModal'>
              <img className='content_portrait'
              src={content.poster_path?`https://image.tmdb.org/t/p/w500${content.poster_path}`:unavailable}
@@ -79,12 +78,7 @@ export default function ContentModal({children, media_type, id}) {
              alt={content.name || content.title}
              />
              <div className='contentModal_about'>
-               <span className='contentModal_title'>{content.name || content.title} (
-                 {(
-                  content.first_air_dat ||
-                  content.release_date ||
-                  "-----"
-               ).substring(0, 4)})
+               <span className='contentModal_title'>{content.name || content.title} 
                </span>
                {content.tagline && (
                  <i className='tagline'>{content.tagline}</i>

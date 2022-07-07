@@ -33,11 +33,18 @@
     }
 }
 
-
+@media(min-width: 416px) and (max-width: 856px){
+    .header{
+        gap: 8vw;
+    }
+    .appName{
+        width: 22vw;
+    }
+}
 @media(max-width: 415px){
     .header{
     gap: 1vw;
-    flex-direction: column;
+    // flex-direction: column;
     .nameBox{
         flex-direction: column;
     }
