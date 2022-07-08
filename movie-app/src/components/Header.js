@@ -4,6 +4,7 @@ import WhatshotIcon from '@mui/icons-material/Whatshot';
 import MovieIcon from '@mui/icons-material/Movie';
 import SeriesIcon from '@mui/icons-material/Tv';
 import SearchIcon from '@mui/icons-material/Search';
+import { NavLink } from 'react-router-dom';
 
 
 export default function SimpleBottomNavigation() {
@@ -37,15 +38,15 @@ export default function SimpleBottomNavigation() {
           <div className={`bar bottom ${burger}`}></div>
         </div>
         
-        <a className='nameBox' href={'/'}>
+        <NavLink className='nameBox' to={'/'}>
         <img src="/movie-icon.svg" alt=""/>
         <span className="appName">Movie App</span>
-        </a>
+        </NavLink>
         <div className={`navbar ${menu}`}>
-        <a className="navIcon" href={'/'} ><BottomNavigationAction className='icon' icon={<WhatshotIcon />} />Trending</a>
-        <a className="navIcon" href={'/movies'} ><BottomNavigationAction className='icon' icon={<MovieIcon />} /><div>Movies</div></a>
-        <a className="navIcon" href={'/series'} ><BottomNavigationAction className='icon'  icon={<SeriesIcon />} /><div>Series</div></a>
-        <a className="navIcon" href={'/search'} ><BottomNavigationAction className='icon'  icon={<SearchIcon />} /><div>Search</div></a>
+        <NavLink className="navIcon" to={'/'} ><BottomNavigationAction className='icon' icon={<WhatshotIcon />} />Trending</NavLink>
+        <NavLink className="navIcon" to={'/movies'} ><BottomNavigationAction className='icon' icon={<MovieIcon />} /><div>Movies</div></NavLink>
+        <NavLink className="navIcon" to={'/series'} ><BottomNavigationAction className='icon'  icon={<SeriesIcon />} /><div>Series</div></NavLink>
+        <NavLink className="navIcon" to={'/search'} ><BottomNavigationAction className='icon'  icon={<SearchIcon />} /><div>Search</div></NavLink>
         </div>
       </div>
       </div>
