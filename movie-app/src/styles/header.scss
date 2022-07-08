@@ -31,7 +31,7 @@
             width: 100%;
         }
         .bottom.open{
-            transform: rotateZ(45deg)  translate(-6px, -5px);
+            transform: rotateZ(45deg)  translate(-5.5px, -6px);
             width: 100%;
         }
     }
@@ -110,7 +110,7 @@
             }
         }
     }
-    .on{
+    .navbar.on{
         flex-direction: column;
         align-items: center;
         position: fixed;
@@ -118,27 +118,21 @@
         top: 8%;
         gap: 1rem;
         padding: 20px 0;
-        background-color: gray;
+        background-color: #192227;
         width: 40% !important;
         border-radius: 10px;
         transition-duration: 500ms;
         transition: ease-in-out;
     }
-    .off{
-        flex-direction: column;
-        align-items: flex-end;
+    .navbar{
         position: fixed;
         right: -500px;
-        top: 8%;
-        gap: 1rem;
-        background-color: gray;
-        width: 50% !important;
     }
     .navIcon{
-        color: #192227;
+        color: #d0d5d9;
         width: 10rem;
     }
     .icon{
-
+        color: #d0d5d9;
     }
 }

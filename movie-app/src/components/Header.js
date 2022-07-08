@@ -9,7 +9,6 @@ import { NavLink } from 'react-router-dom';
 
 
 export default function SimpleBottomNavigation() {
-  // const [value, setValue] = React.useState(0);
   const [menu, setMenu] = useState('off');
   const [burger, setBurger] = useState('close');
 
@@ -30,15 +29,15 @@ export default function SimpleBottomNavigation() {
     })
   }
   
+  function blurHandler(e){
+    console.log('close');
+    setMenu('off', e.target.value)
+    setBurger('close', e.target.value)
+  }
 
   return (
     <div>
       <div className='header'
-        // showLabels
-        // value={value}
-        // onChange={(event, newValue) => {
-        //   setValue(newValue);
-        // }}
       >
       <div className={`barButton`} onClick={switcher}>
           <div className={`bar top ${burger}`}></div>
@@ -46,11 +45,11 @@ export default function SimpleBottomNavigation() {
           <div className={`bar bottom ${burger}`}></div>
         </div>
         
-        <NavLink className='nameBox' to={'/'}/*  onClick={() => window.scroll(0, 0)} */ >
+        <NavLink className='nameBox' to={'/'}>
         <img src="/movie-icon.svg" alt=""/>
         <span className="appName">Movie App</span>
         </NavLink>
-        <div className={`navbar ${menu}`}>
+        <div className={`navbar ${menu}`} onBlur={blurHandler}>
         <NavLink className="navIcon" to={'/'} ><BottomNavigationAction className='icon' icon={<WhatshotIcon />} />Trending</NavLink>
         <NavLink className="navIcon" to={'/movies'} ><BottomNavigationAction className='icon' icon={<MovieIcon />} /><div>Movies</div></NavLink>
         <NavLink className="navIcon" to={'/series'} ><BottomNavigationAction className='icon'  icon={<SeriesIcon />} /><div>Series</div></NavLink>
