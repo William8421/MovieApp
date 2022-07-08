@@ -1,5 +1,5 @@
-import * as React from 'react';
-import BottomNavigation from '@mui/material/BottomNavigation';
+import React, {useState} from 'react';
+// import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import WhatshotIcon from '@mui/icons-material/Whatshot';
 import MovieIcon from '@mui/icons-material/Movie';
@@ -9,24 +9,54 @@ import { NavLink } from 'react-router-dom';
 
 
 export default function SimpleBottomNavigation() {
-  const [value, setValue] = React.useState(0);
+  // const [value, setValue] = React.useState(0);
+  const [menu, setMenu] = useState('off');
+  const [burger, setBurger] = useState('close');
+
+  function switcher(){
+    setMenu(menu => {
+      if(menu === "off"){
+        return "on"
+      }else {
+        return "off"
+      }
+    })
+    setBurger(burger => {
+      if(burger === 'close'){
+        return "open"
+      }else{
+        return "close"
+      }
+    })
+  }
+  
 
   return (
-      <BottomNavigation className='header'
-        showLabels
-        value={value}
-        onChange={(event, newValue) => {
-          setValue(newValue);
-        }}
+    <div>
+      <div className='header'
+        // showLabels
+        // value={value}
+        // onChange={(event, newValue) => {
+        //   setValue(newValue);
+        // }}
       >
-        <div className='nameBox' onClick={() => window.scroll(0, 0)} >
+      <div className={`barButton`} onClick={switcher}>
+          <div className={`bar top ${burger}`}></div>
+          <div className={`bar middle ${burger}`}></div>
+          <div className={`bar bottom ${burger}`}></div>
+        </div>
+        
+        <NavLink className='nameBox' to={'/'}/*  onClick={() => window.scroll(0, 0)} */ >
         <img src="/movie-icon.svg" alt=""/>
         <span className="appName">Movie App</span>
+        </NavLink>
+        <div className={`navbar ${menu}`}>
+        <NavLink className="navIcon" to={'/'} ><BottomNavigationAction className='icon' icon={<WhatshotIcon />} />Trending</NavLink>
+        <NavLink className="navIcon" to={'/movies'} ><BottomNavigationAction className='icon' icon={<MovieIcon />} /><div>Movies</div></NavLink>
+        <NavLink className="navIcon" to={'/series'} ><BottomNavigationAction className='icon'  icon={<SeriesIcon />} /><div>Series</div></NavLink>
+        <NavLink className="navIcon" to={'/search'} ><BottomNavigationAction className='icon'  icon={<SearchIcon />} /><div>Search</div></NavLink>
         </div>
-        <NavLink className="navIcon" to={'/'} ><BottomNavigationAction style={{color: '#d0d5d9'}} icon={<WhatshotIcon />} />Trending</NavLink>
-        <NavLink className="navIcon" to={'/movies'} ><BottomNavigationAction style={{color: '#d0d5d9'}}icon={<MovieIcon />} /><div>Movies</div></NavLink>
-        <NavLink className="navIcon" to={'/series'} ><BottomNavigationAction style={{color: '#d0d5d9'}} icon={<SeriesIcon />} /><div>Series</div></NavLink>
-        <NavLink className="navIcon" to={'/search'} ><BottomNavigationAction style={{color: '#d0d5d9'}} icon={<SearchIcon />} /><div>Search</div></NavLink>
-      </BottomNavigation>
+      </div>
+      </div>
   );
 }

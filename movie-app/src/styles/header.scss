@@ -1,36 +1,76 @@
 .header{
-    background-color: #192227 !important;
+    background-color: #192227;
     position:fixed;
     top: 0;
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
-    gap: 15vw;
     height: 60px;
-    .appName{
-        text-decoration: none;
-        color: #d0d5d9;
-        font-size: 30px;
-        align-self: center;
-        font-family: 'Satisfy', cursive;
-    }
-    .nameBox{
-          display: flex;
-          align-items: center;
-          gap: 1vw;
-          cursor: pointer;
-          img{
-              height: 80%;
-          }
-    }
-    .navIcon{
+    .barButton{
+        width: 12vw;
+        height: 80%;
+        background-color: gray;
         display: flex;
         flex-direction: column;
+        justify-content: space-evenly;
         align-items: center;
-        text-decoration: none;
-        color: #d0d5d9;
-        font-family: 'PT Mono', monospace;
+        cursor: pointer;
+        padding: 3px 0;
+        position: absolute;
+        right: -500px;
+        .bar{
+            background-color: rgb(42, 39, 39);
+            height: 7px;
+            border-radius: 10px;
+            width: 80%;
+        }
+        .middle.open{
+            display: none;
+        }
+        .top.open{
+            transform: rotateZ(-45deg) translate(-5px, 6px);
+            width: 100%;
+        }
+        .bottom.open{
+            transform: rotateZ(45deg)  translate(-6px, -5px);
+            width: 100%;
+        }
     }
+    .nameBox{
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 1vw;
+        cursor: pointer;
+        width: 15%;
+        img{
+            height: 80%;
+        }
+        .appName{
+            text-decoration: none;
+            color: #d0d5d9;
+            font-size: 2vw;
+            align-self: center;
+            font-family: 'Satisfy', cursive;
+        }
+    }
+    .navbar{
+        display: flex;
+        justify-content: space-around;
+        width: 90%;
+        color: #d0d5d9;
+        .navIcon{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #d0d5d9;
+            font-family: 'PT Mono', monospace;
+        }
+        .icon{
+            color: #d0d5d9;
+        }
+    }
+    
 }
 
 @media(min-width: 416px) and (max-width: 856px){
@@ -43,18 +83,62 @@
 }
 @media(max-width: 415px){
     .header{
-    gap: 1vw;
-    // flex-direction: column;
-    .nameBox{
         flex-direction: column;
+        justify-content: center;
+        .barButton{
+            right: 5px;
+            width: 12vw;
+        }
+        .bar{
+            background-color: black;
+            height: 7px;
+            border-radius: 10px;
+            width: 80%;
+        }
+        .nameBox{
+            position: fixed;
+            color: black;
+            align-self: flex-start;
+            width: 50%;
+            img{
+                width: 25%;
+                align-self: flex-start;
+                margin-right: 3vw;
+            }
+            .appName{
+                font-size: 8vw ;
+            }
+        }
     }
-    img{
-        // display: none;
-        width: 20px;
+    .on{
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        right: 0;
+        top: 8%;
+        gap: 1rem;
+        padding: 20px 0;
+        background-color: gray;
+        width: 40% !important;
+        border-radius: 10px;
+        transition-duration: 500ms;
+        transition: ease-in-out;
     }
-    .appName{
-        width: 80px;
-        font-size: 20px;
+    .off{
+        flex-direction: column;
+        align-items: flex-end;
+        position: fixed;
+        right: -500px;
+        top: 8%;
+        gap: 1rem;
+        background-color: gray;
+        width: 50% !important;
     }
+    .navIcon{
+        color: #192227;
+        width: 10rem;
+    }
+    .icon{
+
     }
 }

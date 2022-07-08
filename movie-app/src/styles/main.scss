@@ -21,3 +21,8 @@
 .pages{
     margin-top: 20px;
 }
+@media(max-width: 415px){
+    .pageTitle{
+        font-size: 8vw !important;
+    }
+}
