@@ -115,7 +115,7 @@
         align-items: center;
         position: fixed;
         right: 0;
-        top: 8%;
+        top: 0;
         gap: 1rem;
         padding: 20px 0;
         background-color: #192227cd;
@@ -124,6 +124,8 @@
         border-radius: 10px;
         transition-duration: 500ms;
         transition: ease-in-out;
+        z-index: 100;
+        border: solid 1px yellow;
     }
     .navbar{
         position: fixed;
