@@ -5,6 +5,7 @@ import MovieIcon from '@mui/icons-material/Movie';
 import SeriesIcon from '@mui/icons-material/Tv';
 import SearchIcon from '@mui/icons-material/Search';
 import { NavLink } from 'react-router-dom';
+// import Modal from '@mui/material/Modal';
 
 
 export default function SimpleBottomNavigation() {
@@ -32,7 +33,7 @@ export default function SimpleBottomNavigation() {
         <img src="/movie-icon.svg" alt=""/>
         <span className="appName">Movie App</span>
         </NavLink>
-        <div className={`navbar ${menu}`}>
+        <div className={`navbar ${menu}`} onClick={switcher}>
         <NavLink className="navIcon" to={'/'} ><BottomNavigationAction className='icon' icon={<WhatshotIcon />} />Trending</NavLink>
         <NavLink className="navIcon" to={'/movies'} ><BottomNavigationAction className='icon' icon={<MovieIcon />} /><div>Movies</div></NavLink>
         <NavLink className="navIcon" to={'/series'} ><BottomNavigationAction className='icon'  icon={<SeriesIcon />} /><div>Series</div></NavLink>
