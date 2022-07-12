@@ -86,10 +86,10 @@ export default function ContentModal({children, media_type, id}) {
                <span className='contentModal_description'>
                 {content.overview}
                </span>
-               <div>
+               {/* <div> */}
                 <Carousel media_type={media_type} id={id} />
                  
-               </div>
+               {/* </div> */}
 
                <Button
                variant='contained'

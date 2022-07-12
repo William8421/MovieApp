@@ -131,12 +131,17 @@
     }
     /* -------------- */
     .contentModal{
-        gap: 5rem;
+        gap: 5vw;
+    }
+    .contentModal_landscape{
+    }
+    .contentModal_about{
+        margin-top: 6rem;
+        gap: 2vw;
     }
     .contentModal_title{
-        font-size: 6vw;
+        font-size: 4vw;
         text-align: center;
-        margin-top: 2rem;
     };
     .tagline{
         display: none
@@ -144,6 +149,7 @@
     .contentModal_description{
         font-size: 3vw;
     }
+    /* -------------- */
     .pageTitle{
         font-size: 8vw !important;
     }
