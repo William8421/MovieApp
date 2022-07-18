@@ -9,7 +9,7 @@ import CustomPagination from '../components/CustomPagination';
 export default function Search() {
     const [type, setType] = useState(0)
     const [page, setPage] = useState(1)
-    const [searchText, setSearchText] = useState(0)
+    const [searchText, setSearchText] = useState()
     const [content, setContent] = useState()
     const [numOfPages, setNumOfPages] = useState()
 
@@ -69,7 +69,7 @@ export default function Search() {
         </Tabs>
 
       </ThemeProvider>
-      <div className='container'>
+      <div className='container' style={{width: "85%"}} >
             {
                 content && content.map(item => (
                     <SingleContent

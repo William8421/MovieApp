@@ -91,7 +91,7 @@ export default function ContentModal({children, media_type, id}) {
                  
                {/* </div> */}
 
-               <Button
+               {video? <Button
                variant='contained'
                startIcon={<YouTubeIcon />}
                target="__blank"
@@ -99,7 +99,7 @@ export default function ContentModal({children, media_type, id}) {
                style={{backgroundColor: "#131212"}}
                >
                  WATCH TRAILER
-               </Button>
+               </Button>: <button>no trailer available</button>}
              </div>
            </div>
           </Box>)}
