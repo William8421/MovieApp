@@ -9,7 +9,7 @@ import CustomPagination from '../components/CustomPagination';
 export default function Search() {
     const [type, setType] = useState(0)
     const [page, setPage] = useState(1)
-    const [searchText, setSearchText] = useState()
+    const [searchText, setSearchText] = useState([])
     const [content, setContent] = useState()
     const [numOfPages, setNumOfPages] = useState()
 
@@ -69,6 +69,7 @@ export default function Search() {
         </Tabs>
 
       </ThemeProvider>
+      <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
       <div className='container' style={{width: "85%"}} >
             {
                 content && content.map(item => (
@@ -83,13 +84,17 @@ export default function Search() {
                     />
                 ))
             }
-            {searchText &&
-            content.length === 0 &&
-            (type ? <h2>No Series Found</h2> : <h2>No Movie Found</h2>)
+            {content === undefined?
+            null
+            : (content.length > 0? null
+            : (type ? <h2>No Series Found</h2> : <h2>No Movie Found</h2>))
             }
+        </div>
+            <div>
         {numOfPages > 1 &&
         <CustomPagination setPage={setPage} numOfPages={numOfPages} />
         }
+        </div>
         </div>
     </div>
   )

@@ -54,6 +54,7 @@ const Carousel = ({media_type, id}) => {
     disableDotsControls
     disableButtonsControls
     mouseTracking
+    animationDuration={1000}
     items={items} />
   );
 }
