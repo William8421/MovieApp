@@ -33,8 +33,6 @@ export default function Search() {
               // eslint-disable-next-line
           }, [type, page])
       
-      
-      
   return (
     <div>
       <ThemeProvider theme={darkTheme}>
@@ -45,6 +43,13 @@ export default function Search() {
       label="search"
       variant='filled'
       onChange={(e) => setSearchText(e.target.value)}
+      onKeyDown={(e) => {
+        if(e.key === "Enter"){
+          fetchSearch()
+        // } else{
+        //   setSearchText(e.target.value)
+        }
+      }}
       />
       <Button
       variant='contained'
